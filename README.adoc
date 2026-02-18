@@ -1,5 +1,5 @@
 = Intellij-Settings
-:raw_intellij_settings_url: https://raw.githubusercontent.com/chubbyhippo/intellij-settings/refs/heads/main
+:raw_intellij_settings_url: https://raw.githubusercontent.com/takeedev/intellij-settings/refs/heads/main
 
 == Setup
 
