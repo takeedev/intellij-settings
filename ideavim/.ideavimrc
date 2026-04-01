@@ -209,6 +209,7 @@ map <leader>aB <action>(ActivateBuildToolWindow)
 map <leader>ac <action>(ActivateCommitToolWindow)
 map <leader>aC <action>(ActivateCoverageToolWindow)
 map <leader>ad <action>(ActivateDebugToolWindow)
+map <leader>aD <action>(ActivateServicesToolWindow)
 map <leader>af <action>(ActivateFindToolWindow)
 map <leader>ag <action>(ActivateVersionControlToolWindow)
 map <leader>aG <action>(ActivateGradleToolWindow)
@@ -225,6 +226,7 @@ map <leader>aS <action>(ActivateServicesToolWindow)
 map <leader>at <action>(ActivateTerminalToolWindow)
 map <leader>aT <action>(ActivateTaskToolWindow)
 map <leader>av <action>(ActivateVersionControlToolWindow)
+map <leader>aw <action>(Git.Show.WorkingTrees)
 
 " Buffers
 nnoremap <leader>1 :buffer 1<CR>
@@ -312,6 +314,7 @@ map <leader>gl <action>(Vcs.Show.Log)
 map <leader>gp <action>(Git.Pull)
 map <leader>gs <action>(GotoSuperMethod)
 map <leader>gt <action>(GotoTest)
+map <leader>gw <action>(Git.Show.WorkingTrees)
 
 " Hide all tool windows
 map <leader>h <action>(HideAllWindows)
@@ -337,10 +340,11 @@ map <leader>k <action>(ChangeKeymap)
 map <leader>lh <action>(LocalHistory.ShowHistory)
 map <leader>lH <action>(LocalHistory.ShowSelectionHistory)
 
-" Mode
+" Mode & mouse
 map <leader>mc <action>(ToggleCompactMode)
 map <leader>md <action>(ToggleDistractionFreeMode)
 map <leader>mf <action>(ToggleFullScreen)
+map <leader>mh <action>(ShowHoverInfo)
 map <leader>mk <action>(TogglePresentationAssistantAction)
 map <leader>mp <action>(TogglePresentationAssistantAction)
 map <leader>mP <action>(TogglePresentationMode)
@@ -397,11 +401,12 @@ map <leader>rd <action>(DebugClass)
 map <leader>re <action>(Refactorings.QuickListPopupAction)
 map <leader>rf <action>(RecentFiles)
 map <leader>ri <action>(RevealIn)
+map <leader>rl <action>(RecentLocations)
 map <leader>rm <action>(RunMenu)
-map <leader>rn <action>(RenameElement)
+jap <leader>rn <action>(RenameElement)
 map <leader>ro <action>(ChangesView.Revert)
 map <leader>rp <action>(Replace)
-map <leader>rr <action>(ContextRun)
+map <leader>rr <action>(RunClass)
 map <leader>rs <action>(runShellFileAction)
 map <leader>ru <action>(ChooseRunConfiguration)
 map <leader>rw <action>(ReplaceInPath)
@@ -498,3 +503,16 @@ vmap [ S[
 vmap ] S[
 vmap { S{
 vmap } S}
+
+" Jupyter Notebook actions
+map ,R <action>(NotebookRunAllAboveAction)
+map ,at <action>(JupyterCellAddTagAction)
+map ,d <action>(NotebookDeleteCellAction)
+map ,iC <action>(NotebookInsertCodeCellAction)
+map ,ic <action>(NotebookInsertCodeCellActionPlusIcon)
+map ,im <action>(NotebookInsertMarkdownCellAction)
+map ,j <action>(NotebookMoveCellDownAction)
+map ,k <action>(NotebookMoveCellUpAction)
+map ,ra <action>(NotebookRunAllAction)
+map ,rr <action>(NotebookRunCellSelectBelowAction)
+
