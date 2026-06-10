@@ -20,7 +20,6 @@
     <keyboard-shortcut first-keystroke="shift meta z" />
   </action>
   <action id="$SelectAll">
-    <keyboard-shortcut first-keystroke="ctrl a" />
     <keyboard-shortcut first-keystroke="meta a" />
   </action>
   <action id="$Undo">
@@ -106,23 +105,36 @@
     <keyboard-shortcut first-keystroke="ctrl alt j" />
     <keyboard-shortcut first-keystroke="shift meta j" />
   </action>
+  <action id="EditorDecreaseFontSizeGlobal" />
   <action id="EditorDown">
     <keyboard-shortcut first-keystroke="down" />
     <keyboard-shortcut first-keystroke="ctrl j" />
+    <keyboard-shortcut first-keystroke="ctrl n" />
   </action>
   <action id="EditorDownWithSelection" />
   <action id="EditorEscape">
     <keyboard-shortcut first-keystroke="escape" />
     <keyboard-shortcut first-keystroke="ctrl open_bracket" />
   </action>
+  <action id="EditorIncreaseFontSizeGlobal" />
   <action id="EditorJoinLines" />
   <action id="EditorLeft">
     <keyboard-shortcut first-keystroke="left" />
     <keyboard-shortcut first-keystroke="ctrl h" />
   </action>
+  <action id="EditorLineEnd">
+    <keyboard-shortcut first-keystroke="end" />
+    <keyboard-shortcut first-keystroke="ctrl e" />
+  </action>
+  <action id="EditorLineStart">
+    <keyboard-shortcut first-keystroke="home" />
+    <keyboard-shortcut first-keystroke="ctrl a" />
+  </action>
   <action id="EditorLookupDown" />
   <action id="EditorLookupUp" />
-  <action id="EditorNextWord" />
+  <action id="EditorNextWord">
+    <keyboard-shortcut first-keystroke="alt f" />
+  </action>
   <action id="EditorNextWordWithSelection" />
   <action id="EditorPageDown">
     <keyboard-shortcut first-keystroke="page_down" />
@@ -132,7 +144,9 @@
     <keyboard-shortcut first-keystroke="page_up" />
     <keyboard-shortcut first-keystroke="ctrl u" />
   </action>
-  <action id="EditorPreviousWord" />
+  <action id="EditorPreviousWord">
+    <keyboard-shortcut first-keystroke="alt b" />
+  </action>
   <action id="EditorPreviousWordWithSelection" />
   <action id="EditorRight">
     <keyboard-shortcut first-keystroke="right" />
@@ -141,9 +155,18 @@
   <action id="EditorScrollDown" />
   <action id="EditorScrollToCenter" />
   <action id="EditorScrollUp" />
+  <action id="EditorTextEnd">
+    <keyboard-shortcut first-keystroke="ctrl end" />
+    <keyboard-shortcut first-keystroke="shift alt period" />
+  </action>
+  <action id="EditorTextStart">
+    <keyboard-shortcut first-keystroke="ctrl home" />
+    <keyboard-shortcut first-keystroke="shift alt comma" />
+  </action>
   <action id="EditorUp">
     <keyboard-shortcut first-keystroke="up" />
     <keyboard-shortcut first-keystroke="ctrl k" />
+    <keyboard-shortcut first-keystroke="ctrl p" />
   </action>
   <action id="EditorUpWithSelection" />
   <action id="EscUnfollowUserAction">
@@ -176,6 +199,7 @@
   <action id="GotoBookmark7" />
   <action id="GotoBookmark8" />
   <action id="GotoBookmark9" />
+  <action id="GotoClass" />
   <action id="GotoFile" />
   <action id="MethodHierarchy" />
   <action id="MethodHierarchy.BaseOnThisMethod" />
@@ -208,6 +232,9 @@
   </action>
   <action id="NotebookSelectCellAboveAction" />
   <action id="NotebookSelectCellBelowAction" />
+  <action id="ParameterInfo">
+    <keyboard-shortcut first-keystroke="shift alt p" />
+  </action>
   <action id="PopupHector" />
   <action id="PreviousDiff">
     <keyboard-shortcut first-keystroke="shift f7" />
@@ -217,6 +244,8 @@
     <keyboard-shortcut first-keystroke="alt left" />
     <keyboard-shortcut first-keystroke="shift ctrl comma" />
   </action>
+  <action id="RecentFiles" />
+  <action id="RecentFilesFallback" />
   <action id="Replace" />
   <action id="ResizeToolWindowDown">
     <keyboard-shortcut first-keystroke="shift ctrl alt down" />
@@ -260,6 +289,8 @@
     <keyboard-shortcut first-keystroke="shift ctrl p" />
   </action>
   <action id="ShowReformatFileDialog" />
+  <action id="SwitcherIterateItems" />
+  <action id="SwitcherRecentEditedChangedToggleCheckBox" />
   <action id="TableResult.SelectAllOccurrences" />
   <action id="Terminal.InsertInlineCompletionItem">
     <keyboard-shortcut first-keystroke="right" />

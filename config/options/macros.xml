@@ -1,0 +1,9 @@
+<application>
+  <component name="ActionMacroManager">
+    <macro name="NewScratchFile">
+      <action id="GotoAction" />
+      <typing text-keycode="83:1;67:0;82:0;65:0;84:0">Scrat</typing>
+      <shortuct text="ENTER" />
+    </macro>
+  </component>
+</application>

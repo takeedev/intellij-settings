@@ -20,8 +20,6 @@ $cmd installPlugins \
   StringToolsPlugin \
   com.fwdekker.randomness \
   com.github.camork.fileExpander \
-  com.github.clojure-lsp \
-  com.github.clojure-repl \
   com.intellij.plugins.macoskeymap \
   com.joshestein.ideavim-quickscope \
   com.julienphalip.ideavim.peekaboo \

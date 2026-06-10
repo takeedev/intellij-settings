@@ -7,9 +7,8 @@ set clipboard+=unnamedplus
 " Use IDE-aware join behavior
 set ideajoin
 
-" Case-insensitive search by default...
+" Case-insensitive search by default
 set ignorecase
-" ...but become case-sensitive if the pattern contains uppercase letters
 set smartcase
 
 " Show absolute + relative line numbers
@@ -70,13 +69,13 @@ sethandler <c-a> a:ide
 sethandler <c-b> a:ide
 sethandler <c-c> i-v:vim
 sethandler <c-d> i:ide
-sethandler <c-e> a:vim
+sethandler <c-e> a:ide
 sethandler <c-f> a:ide
 sethandler <c-h> n:vim
 sethandler <c-i> a:vim
 sethandler <c-j> n:vim
 sethandler <c-k> n:vim
-sethandler <c-l> n:vim
+sethandler <c-l> a:ide
 sethandler <c-m> a:ide
 sethandler <c-n> n:vim
 sethandler <c-o> a:vim
@@ -115,7 +114,7 @@ map _ <action>(StretchSplitToLeft)
 map + <action>(StretchSplitToRight)
 
 " Quick editing/reloading of IdeaVim config
-map <Space>eV :edit ~/.ideavimrc<cr>
+map <Space>.v :edit ~/.ideavimrc<cr>
 map <Space>sV :source ~/.ideavimrc<cr>
 
 " VCS / diff / error navigation
@@ -199,8 +198,8 @@ map <leader>.p <action>(WelcomeScreen.Plugins)
 map <leader>.r <action>(RunConfiguration)
 map <leader>.R <action>(RestartIde)
 map <leader>.s <action>(SettingsEntryPoint)
-map <leader>.t <action>(ViewToolButtons)
-map <leader>.v :edit ~/.ideavimrc<cr>
+map <leader>.t <action>(ChangeLaf)
+map <leader>.T <action>(ViewToolButtons)
 map <leader>.z <action>(ToggleZenMode)
 
 " <leader>a – Activate tool windows
@@ -253,16 +252,18 @@ map <leader>bp :bp<CR>
 map <leader>C <action>(Educational.Check)
 
 " Code /clear / close / collapse / config
-map <leader>ca <action>(Refactorings.QuickListPopupAction)
+map <leader>ca <action>(ShowIntentionActions)
 map <leader>cd <action>(GotoDeclaration)
 map <leader>cf <action>(ReformatCode)
 map <leader>ch <action>(CallHierarchy)
 map <leader>ci <action>(OptimizeImports)
 map <leader>ck <action>(ChangeKeymap)
 map <leader>cn <action>(ClearAllNotifications)
-map <leader>co <action>(CloseAllEditorsButActive)
+map <leader>co <action>(OptimizeImports)
+map <leader>cO <action>(CloseAllEditorsButActive)
 map <leader>cp <action>(WelcomeScreen.Plugins)
 map <leader>cr <action>(RenameElement)
+map <leader>cR <action>(Refactorings.QuickListPopupAction)
 map <leader>cs <action>(SettingsEntryPoint)
 map <leader>cv :edit ~/.ideavimrc<cr>
 
@@ -286,6 +287,7 @@ map <leader>em <action>(ExtractMethod)
 map <leader>ep <action>(IntroduceParameter)
 map <leader>er <action>(ExpandRegion)
 map <leader>ev <action>(IntroduceVariable)
+map <leader>eV <action>(refactoring.introduce.property)
 
 " <leader>f – find / format
 map <leader>fe <action>(RevealIn)
@@ -327,6 +329,7 @@ map <leader>il <action>(Inline)
 map <leader>im <action>(ImplementMethods)
 map <leader>in <action>(Inline)
 map <leader>ip <action>(IntroduceParameter)
+map <leader>iP <action>(refactoring.introduce.property)
 map <leader>iv <action>(IntroduceVariable)
 
 " Quick docs / implementations
@@ -362,7 +365,7 @@ map <leader>nd <action>(NewDir)
 map <leader>ne <action>(NewElement)
 map <leader>nf <action>(NewFile)
 map <leader>np <action>(NewProject)
-map <leader>ns <action>(NewScratchFile)
+map <leader>ns <action>(Macro.NewScratchFile)
 map <leader>nt <action>(TerminalNewPredefinedSession)
 
 " <leader>o – open / optimize / override
@@ -403,7 +406,7 @@ map <leader>rf <action>(RecentFiles)
 map <leader>ri <action>(RevealIn)
 map <leader>rl <action>(RecentLocations)
 map <leader>rm <action>(RunMenu)
-jap <leader>rn <action>(RenameElement)
+map <leader>rn <action>(RenameElement)
 map <leader>ro <action>(ChangesView.Revert)
 map <leader>rp <action>(Replace)
 map <leader>rr <action>(RunClass)
@@ -447,6 +450,8 @@ map <leader>tf <action>(ToggleFullScreen)
 map <leader>th :tabm<Space>-<CR>
 map <leader>tk <action>(TogglePresentationAssistantAction)
 map <leader>tl :tabm<Space>+<CR>
+map <leader>tn :set number!<CR>
+map <leader>tr :set relativenumber!<CR>
 map <leader>tt <action>(ViewToolButtons)
 map <leader>tv <action>(VimPluginToggle)
 map <leader>tz <action>(ToggleZenMode)
@@ -503,16 +508,3 @@ vmap [ S[
 vmap ] S[
 vmap { S{
 vmap } S}
-
-" Jupyter Notebook actions
-map ,R <action>(NotebookRunAllAboveAction)
-map ,at <action>(JupyterCellAddTagAction)
-map ,d <action>(NotebookDeleteCellAction)
-map ,iC <action>(NotebookInsertCodeCellAction)
-map ,ic <action>(NotebookInsertCodeCellActionPlusIcon)
-map ,im <action>(NotebookInsertMarkdownCellAction)
-map ,j <action>(NotebookMoveCellDownAction)
-map ,k <action>(NotebookMoveCellUpAction)
-map ,ra <action>(NotebookRunAllAction)
-map ,rr <action>(NotebookRunCellSelectBelowAction)
-
