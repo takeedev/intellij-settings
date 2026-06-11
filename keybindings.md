@@ -1,6 +1,6 @@
 # IdeaVim Keybindings Reference (.ideavimrc)
 
-เอกสารอธิบาย key mappings ทั้งหมดจากไฟล์ [`.ideavimrc`](https://github.com/takeedev/intellij-settings/blob/main/ideavim/.ideavimrc) ของ takeedev
+เอกสารอธิบาย key mappings ทั้งหมดจากไฟล์ [`.ideavimrc`](https://github.com/takeedev/intellij-settings/blob/main/ideavim/.ideavimrc)
 
 > **Leader key = `Space` (เว้นวรรค)** — ทุก mapping ที่เขียนว่า `<leader>` ให้กด Space ก่อน
 
