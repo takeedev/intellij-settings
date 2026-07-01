@@ -13,6 +13,7 @@ fi
 
 $cmd installPlugins \
   "PlantUML integration" \
+  AceJump \
   IdeaVIM \
   com.github.camork.fileExpander \
   com.intellij.ml.llm \
@@ -22,4 +23,5 @@ $cmd installPlugins \
   dev.turingcomplete.intellijdevelopertoolsplugins \
   eu.theblob42.idea.whichkey \
   org.asciidoctor.intellij.asciidoc \
+  org.jetbrains.IdeaVim-EasyMotion \
   org.jetbrains.jumpToLine

@@ -16,6 +16,7 @@ $cmd installPlugins \
   "Lombook Plugin" \
   "PlantUML integration" \
   "String Manipulation" \
+  AceJump \
   IdeaVIM \
   StringToolsPlugin \
   com.fwdekker.randomness \
@@ -32,4 +33,5 @@ $cmd installPlugins \
   mobi.hsz.idea.gitignore \
   nl.bryanderidder.regexrenamefiles \
   org.asciidoctor.intellij.asciidoc \
+  org.jetbrains.IdeaVim-EasyMotion \
   org.jetbrains.jumpToLine

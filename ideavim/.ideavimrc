@@ -11,14 +11,12 @@ set ideajoin
 set ignorecase
 set smartcase
 
-" Show absolute + relative line numbers
+" Show absolute line numbers
 set number
-set relativenumber
 
 " Enable various UX plugins
 set peekaboo          " Show registers on `"` / `@`
 set quickscope        " Highlight f/F/t/T targets
-set sneak             " Enhanced motion (s / S)
 set surround          " Text objects for surroundings like (), "", etc.
 set visualbell        " Use visual bell instead of audible
 
@@ -33,6 +31,7 @@ let g:WhichKeyDesc_e = "<leader>e Extract, Edit..."
 let g:WhichKeyDesc_f = "<leader>f Format, Find..."
 let g:WhichKeyDesc_g = "<leader>g Git, Generate, Goto..."
 let g:WhichKeyDesc_i = "<leader>i Inline, Introduce, Id..."
+let g:WhichKeyDesc_j = "<leader>j Jump, JavaDoc..."
 let g:WhichKeyDesc_l = "<leader>l LocalHistory..."
 let g:WhichKeyDesc_m = "<leader>m Mode..."
 let g:WhichKeyDesc_n = "<leader>n New..."
@@ -90,6 +89,9 @@ sethandler <c-s-n> a:vim
 
 " Space is the leader key
 let mapleader=" "
+
+" M-m behaves like <leader> (must be map, not noremap)
+map <A-m> <Space>
 
 " Insert mode: Ctrl-j/k move cursor up/down (IDE-like)
 imap <c-j> <down>
@@ -335,6 +337,14 @@ map <leader>iv <action>(IntroduceVariable)
 " Quick docs / implementations
 map <leader>jd <action>(QuickJavaDoc)
 map <leader>ji <action>(QuickImplementations)
+
+" Avy-style jumps (requires AceJump + IdeaVim-EasyMotion plugins)
+" Keep easymotion from claiming <leader><leader> (bound to alternate-file above)
+let g:EasyMotion_do_mapping=0
+set easymotion
+" Normal mode: s/S jump with EasyMotion 2-char search
+nmap s <Plug>(easymotion-bd-f2)
+nmap S <Plug>(easymotion-bd-jk)
 
 " Change keymap
 map <leader>k <action>(ChangeKeymap)
