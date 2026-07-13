@@ -392,8 +392,6 @@
 
 ## `<leader>s` — Search / Show / Step (Debug)
 
-> ⚠️ ในไฟล์มี mapping ซ้ำ: `Space s i` ถูกกำหนด 2 ครั้ง (QuickImplementations → StepInto) — **ตัวที่กำหนดทีหลังชนะ คือ StepInto**
-
 ### Search / Goto
 
 | Key | Action | ทำอะไร |

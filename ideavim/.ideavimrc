@@ -434,7 +434,6 @@ map <leader>sd <action>(QuickJavaDoc)
 map <leader>se <action>(ShowErrorDescription)
 map <leader>sf <action>(GotoFile)
 map <leader>sh <action>(ShowHoverInfo)
-map <leader>si <action>(QuickImplementations)
 map <leader>sk <action>(TogglePresentationAssistantAction)
 " Debug stepping
 map <leader>sM <action>(ExternalSystem.ProjectRefreshAction)
