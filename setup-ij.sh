@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
-RAW_INTELLIJ_SETTINGS_URL="https://raw.githubusercontent.com/chubbyhippo/intellij-settings/refs/heads/main"
-RAW_IDEAVIM_URL="https://raw.githubusercontent.com/chubbyhippo/intellij-settings/refs/heads/main/ideavim"
+RAW_INTELLIJ_SETTINGS_URL="https://raw.githubusercontent.com/takeedev/intellij-settings/refs/heads/main"
+RAW_IDEAVIM_URL="https://raw.githubusercontent.com/takeedev/intellij-settings/refs/heads/main/ideavim"
 
 # config paths
 for config_path in \
