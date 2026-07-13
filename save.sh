@@ -26,7 +26,7 @@ for config_path in \
     cp -f "$config_path"/options/projectView.xml ./config/options/projectView.xml
     cp -f "$config_path"/options/ui-datetime.xml ./config/options/ui-datetime.xml
     cp -f "$config_path"/options/ui.lnf.xml ./config/options/ui.lnf.xml
-    cp -f "$config_path"/options/windows/keymap.xml ./config/option/windows/keymap.xml
+    cp -f "$config_path"/options/windows/keymap.xml ./config/options/windows/keymap.xml
 
     # save template
     cp -f "$config_path"/templates/javaJava.xml ./config/templates/javaJava.xml

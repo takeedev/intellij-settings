@@ -12,7 +12,7 @@ for config_path in \
   echo "$config_path"
     # install code styles
     mkdir -p "$config_path/codestyles"
-    cp -frv "config/codestyle"/* "$config_path/codestyles"
+    cp -frv "config/codestyles"/* "$config_path/codestyles"
 
     # install keymaps
     mkdir -p "$config_path/keymaps"
