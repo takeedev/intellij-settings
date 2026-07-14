@@ -16,3 +16,10 @@ curl -s {raw_intellij_settings_url}/setup-ic.sh | /usr/bin/env sh
 ----
 curl -s {raw_intellij_settings_url}/setup-ij.sh | /usr/bin/env sh
 ----
+
+== Rollback
+
+[source,shell,subs="attributes"]
+----
+curl -s {raw_intellij_settings_url}/restore.sh | /usr/bin/env sh
+----
