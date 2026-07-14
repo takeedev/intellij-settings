@@ -3,6 +3,12 @@
 
 == Setup
 
+Close all IntelliJ IDEA processes before running the setup. Existing settings and
+`~/.ideavimrc` are backed up to
+`~/.intellij-settings-backups/<YYYYMMDD-HHMMSS>/` before installation.
+
+Set `INTELLIJ_SETTINGS_BACKUP_DIR` to use a different backup directory.
+
 === Intellij-Community
 
 [source,shell,subs="attributes"]
