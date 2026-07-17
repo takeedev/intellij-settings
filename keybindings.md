@@ -10,6 +10,8 @@
 
 - [การตั้งค่าพื้นฐาน (Settings)](#การตั้งค่าพื้นฐาน-settings)
 - [Plugins ที่เปิดใช้](#plugins-ที่เปิดใช้)
+- [Vim Dial](#vim-dial)
+- [Vim AnyObject](#vim-anyobject)
 - [Insert Mode](#insert-mode)
 - [Multiple Cursors](#multiple-cursors)
 - [การเลื่อน cursor และ scroll](#การเลื่อน-cursor-และ-scroll)
@@ -72,6 +74,32 @@
 | `surround` | จัดการเครื่องหมายครอบข้อความ เช่น `cs"'` เปลี่ยน `"` เป็น `'`, `ds(` ลบวงเล็บ |
 | `which-key` | แสดง popup รายการ key ที่กดต่อได้หลังกด leader |
 | `multiple-cursors` | ใช้หลาย cursor พร้อมกัน (ดูหัวข้อ Multiple Cursors) |
+| `dial` | เพิ่ม/ลดค่าตามความหมาย เช่น number, boolean, date และ Java keyword |
+| `anyobject` | เพิ่ม text object ตามโครงสร้างโค้ด เช่น argument, method, class และ variable |
+
+## Vim Dial
+
+วาง cursor ไว้บนค่าหรือก่อนค่าที่ต้องการเปลี่ยน แล้วใช้:
+
+| Key | ทำอะไร | ตัวอย่าง |
+|---|---|---|
+| `Space +` | เพิ่ม/วนไปค่าถัดไป | `false` → `true`, `private` → `protected`, วันที่วันถัดไป |
+| `Space -` | ลด/วนกลับค่าก่อนหน้า | `true` → `false`, `protected` → `private`, วันที่วันก่อนหน้า |
+
+ไม่ได้ใช้ค่าแนะนำเดิม `Ctrl+a` / `Ctrl+x` เพราะ key ทั้งสองมีหน้าที่อื่นใน config นี้อยู่แล้ว
+
+## Vim AnyObject
+
+ใช้ร่วมกับ operator ของ Vim เช่น `d` (ลบ), `c` (เปลี่ยน), `y` (คัดลอก) และ `v` (เลือก):
+
+| Text object | เป้าหมาย | ตัวอย่าง |
+|---|---|---|
+| `ia` / `aa` | argument ด้านใน / รวม comma | `cia` เปลี่ยน argument, `daa` ลบ argument พร้อม separator |
+| `if` / `af` | method หรือ function | `vif` เลือก body ของ method |
+| `ic` / `ac` | class / interface | `vac` เลือก class ทั้งก้อน |
+| `iv` / `av` | variable หรือ field | `yiv` คัดลอกค่าหรือ declaration |
+| `iu` / `au` | subword ใน `camelCase` / `snake_case` | `ciu` เปลี่ยนเฉพาะ subword |
+| `]a` / `[a` | กระโดดไป argument ถัดไป / ก่อนหน้า | ใช้ไล่ arguments โดยไม่ต้องค้นหา |
 
 ## Insert Mode
 

@@ -19,6 +19,8 @@ $cmd installPlugins \
   AceJump \
   IdeaVIM \
   StringToolsPlugin \
+  com.magidc.ideavim.anyObject \
+  com.magidc.ideavim.dial \
   com.fwdekker.randomness \
   com.github.camork.fileExpander \
   com.intellij.plugins.macoskeymap \

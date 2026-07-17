@@ -20,6 +20,11 @@ set quickscope        " Highlight f/F/t/T targets
 set surround          " Text objects for surroundings like (), "", etc.
 set visualbell        " Use visual bell instead of audible
 
+" Semantic increment/decrement and IDE-aware text objects
+set dial
+let g:dial_include = "basic,numbers,dates,java"
+set anyobject
+
 " Which-Key style popup for <leader> mappings
 set which-key
 set notimeout
@@ -89,6 +94,10 @@ sethandler <c-s-n> a:vim
 
 " Space is the leader key
 let mapleader=" "
+
+" Vim Dial: avoid Ctrl-a/Ctrl-x, which are already routed elsewhere
+nnoremap <leader>+ :DialIncrement<CR>
+nnoremap <leader>- :DialDecrement<CR>
 
 " M-m behaves like <leader> (must be map, not noremap)
 map <A-m> <Space>

@@ -15,6 +15,8 @@ $cmd installPlugins \
   "PlantUML integration" \
   AceJump \
   IdeaVIM \
+  com.magidc.ideavim.anyObject \
+  com.magidc.ideavim.dial \
   com.github.camork.fileExpander \
   com.intellij.ml.llm \
   com.intellij.plugins.macoskeymap \
