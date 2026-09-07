@@ -189,6 +189,7 @@
 
 | Key | ทำอะไร |
 |---|---|
+| `Space a a` | เปิด API Runner |
 | `Space a b` | เปิด Bookmarks |
 | `Space a B` | เปิด Build |
 | `Space a c` | เปิด Commit |

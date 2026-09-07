@@ -214,6 +214,7 @@ map <leader>.T <action>(ViewToolButtons)
 map <leader>.z <action>(ToggleZenMode)
 
 " <leader>a – Activate tool windows
+map <leader>aa <action>(ActivateAPIRunnerToolWindow)
 map <leader>ab <action>(ActivateBookmarksToolWindow)
 map <leader>aB <action>(ActivateBuildToolWindow)
 map <leader>ac <action>(ActivateCommitToolWindow)
