@@ -36,4 +36,5 @@ $cmd installPlugins \
   nl.bryanderidder.regexrenamefiles \
   org.asciidoctor.intellij.asciidoc \
   org.jetbrains.IdeaVim-EasyMotion \
+  com.mallowigi \
   org.jetbrains.jumpToLine
