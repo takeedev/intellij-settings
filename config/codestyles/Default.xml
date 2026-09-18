@@ -1,4 +1,21 @@
 <code_scheme name="Default" version="173">
+  <IsoSqlCodeStyleSettings version="7">
+    <option name="USE_GENERAL_STYLE" value="false" />
+    <option name="SUBQUERY_OPENING" value="1" />
+    <option name="SUBQUERY_CONTENT" value="3" />
+    <option name="SUBQUERY_CLOSING" value="3" />
+    <option name="SUBQUERY_PAR_SPACE_BEFORE" value="1" />
+    <option name="SELECT_EL_LINE" value="101" />
+    <option name="SELECT_ASTERISK_REGULAR" value="true" />
+    <option name="FROM_EL_LINE" value="1" />
+    <option name="FROM_EL_COMMA" value="2" />
+    <option name="FROM_INDENT_JOIN" value="false" />
+    <option name="FROM_ONLY_JOIN_INDENT" value="2" />
+    <option name="FROM_PLACE_ON" value="21" />
+    <option name="WHERE_EL_LINE" value="101" />
+    <option name="WHERE_EL_WRAP" value="2" />
+    <option name="ORDER_EL_LINE" value="101" />
+  </IsoSqlCodeStyleSettings>
   <JavaCodeStyleSettings>
     <option name="CLASS_COUNT_TO_USE_IMPORT_ON_DEMAND" value="9999" />
     <option name="NAMES_COUNT_TO_USE_IMPORT_ON_DEMAND" value="9999" />
