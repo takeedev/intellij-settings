@@ -13,6 +13,7 @@ fi
 
 $cmd installPlugins \
   "PlantUML integration" \
+  "Lombook Plugin" \
   AceJump \
   IdeaVIM \
   com.magidc.ideavim.anyObject \
@@ -27,4 +28,5 @@ $cmd installPlugins \
   org.asciidoctor.intellij.asciidoc \
   org.jetbrains.IdeaVim-EasyMotion \
   com.mallowigi \
+  net.seesharpsoft.intellij.plugins.csv \
   org.jetbrains.jumpToLine

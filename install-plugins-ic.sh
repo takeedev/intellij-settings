@@ -37,4 +37,5 @@ $cmd installPlugins \
   org.asciidoctor.intellij.asciidoc \
   org.jetbrains.IdeaVim-EasyMotion \
   com.mallowigi \
+  net.seesharpsoft.intellij.plugins.csv \
   org.jetbrains.jumpToLine
