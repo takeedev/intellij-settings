@@ -33,45 +33,7 @@ ensure_intellij_is_stopped() {
   fi
 }
 
-create_backup_root() {
-  backup_base=${INTELLIJ_SETTINGS_BACKUP_DIR:-"$HOME/.intellij-settings-backups"}
-  backup_timestamp=$(date '+%Y%m%d-%H%M%S')
-  BACKUP_ROOT="$backup_base/$backup_timestamp"
-
-  if [ -e "$BACKUP_ROOT" ]; then
-    BACKUP_ROOT="$BACKUP_ROOT-$$"
-  fi
-
-  (umask 077 && mkdir -p "$BACKUP_ROOT/config" "$BACKUP_ROOT/home") || exit 1
-  echo "Backup directory: $BACKUP_ROOT"
-}
-
-backup_config() {
-  config_path=$1
-
-  case "$config_path" in
-    "$HOME"/*) relative_path=${config_path#"$HOME"/} ;;
-    *) relative_path=$(basename "$config_path") ;;
-  esac
-
-  backup_target="$BACKUP_ROOT/config/$relative_path"
-  mkdir -p "$backup_target" || exit 1
-
-  for item in codestyles keymaps options templates; do
-    if [ -e "$config_path/$item" ]; then
-      cp -pR "$config_path/$item" "$backup_target/" || exit 1
-    fi
-  done
-}
-
-backup_ideavimrc() {
-  if [ -e "$HOME/.ideavimrc" ]; then
-    cp -p "$HOME/.ideavimrc" "$BACKUP_ROOT/home/.ideavimrc" || exit 1
-  fi
-}
-
 ensure_intellij_is_stopped
-create_backup_root
 
 # config paths
 for config_path in \
@@ -80,7 +42,6 @@ for config_path in \
   "$HOME"/AppData/Roaming/JetBrains/IdeaIC*; do
   if [ -d "$config_path" ]; then
     echo "$config_path"
-    backup_config "$config_path"
     # install code styles
     mkdir -p "$config_path/codestyles"
     curl -ksS "$RAW_INTELLIJ_SETTINGS_URL/config/codestyles/Default.xml" -o "$config_path/codestyles/Default.xml"
@@ -116,7 +77,6 @@ for config_path in \
 done
 
 # install .ideavimrc
-backup_ideavimrc
 curl -ksS "$RAW_IDEAVIM_URL/.ideavimrc" -o ~/.ideavimrc
 
 # install plugins
